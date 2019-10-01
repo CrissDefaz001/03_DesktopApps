@@ -2,45 +2,35 @@ import java.util.Scanner;
 
 public class Rombo {
 
-    public static void main(String[] args)	{
+	public static void main(String[] args) {
+		int num = 6;
+		if (num % 2 == 0) {
+			num++;
+		}
 
-        Scanner sc = new Scanner(System.in);
-        int max = sc.nextInt();
-        int i, j, k;
-        // Si el valor recibido es par, le añadimos uno
+		for (int i = 0; i < num; i += 2) {
+			for (int j = i + 2; j < num; j += 2) {
+				System.out.print("  ");
+			}
+			for (int k = 0; k <= i; k++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
 
-        if (max % 2 == 0) {
-            max+=1;
-        }
-
-        // parte superior del rombo
-        for (i = 1; i <= max; i = i + 2){
-            // Añadimos los espacios necesarios delante de cada linea
-            for (k = max + 1; k >= i; k = k - 2) {
-                System.out.print("  ");
-            }
-
-            // Mostramos los asteriscos
-            for (j = 0; j < i; j++)	{
-                System.out.print("* ");
-            }
-
-            System.out.println();
-        }
-        // parte inferior del rombo
-
-        for (i = max; i >= 1; i = i - 2){
-            // Añadimos los espacios necesarios delante de cada linea
-            for (k = i; k <= max + 2; k = k + 2)			{
-                System.out.print("  ");
-            }
-            // Mostramos los asteriscos
-            for (j = i - 2; j > 0; j--) {
-                System.out.print("* ");
-            }
-            System.out.println();
-        }
-    }
+		for (int i = num; i > 0; i -= 2) {
+			for (int j = num + 2; j > i; j -= 2) { // #
+				// for (int j = max; j > i; j = j - 2) {
+				System.out.print("  ");
+			}
+			for (int k = i - 2; k > 0; k--) { // #
+				// for (int k = i; k > 0; k--) {
+				System.out.print("* ");
+			}
+			System.out.println();
+			/* # -> Elimina las primera linea */
+		}
+	}
 }
 /*
 Salida:
