@@ -18,7 +18,7 @@ public class Rombo {
 			System.out.println();
 		}
 
-		for (int i = num; i > 0; i -= 2) {
+		for (int i = num; i > 1; i -= 2) {
 			for (int j = num + 2; j > i; j -= 2) { // #
 				// for (int j = max; j > i; j = j - 2) {
 				System.out.print("  ");

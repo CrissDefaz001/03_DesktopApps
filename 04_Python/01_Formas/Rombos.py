@@ -1,5 +1,5 @@
 print('Rombo normal:')
-num = 7
+num = 8
 if(num%2 == 0):
   num2 = int(num/2)
 else:
@@ -15,21 +15,21 @@ for i in range(0, num2):
   print('')
   
 print('\nRombo con forma:\n')
-max = 7
-if(max%2 != 0):
-  max +=1  
 
-for i in range(0, max, 2):
-  for j in range(max, i, -2):
-    #print(f'j:{j}')
+if(num%2 == 0):
+  num +=1
+
+for i in range(0, num, 2):
+  for j in range(i+2,num, 2):
     print('. ', end='') #Remover '.' por ''
-  for k in range(i, 1, -1):
-    #print(f'k:{k}')
+  for k in range(0, i+1):
     print('* ', end='')
   print('')
-for i in range(max, 0, -2):
-  for j in range(max, i, -2):
+  
+for i in range(num, 1, -2):
+  for j in range(num+2, i, -2):
     print('. ', end='')
-  for k in range(i, 1, -1):
+  for k in range(i-2, 0, -1):
     print('* ',end='')
   print('')
+  
